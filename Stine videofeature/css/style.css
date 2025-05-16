@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Random Wednesday";
+    src: url(/fonts/Random\ Wednesday.ttf);
+}
+
+h1,
+h2,
+p {
+    font-family: 'Random Wednesday', sans-serif;
+}
+
+.wrapper {
+    width: 1728px;
+    height: 992px;
+    background-image: url('/img/snefnugBaggrund.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.muteknap {
+    width: 80px;
+    height: auto;
+    margin: 10px 0 0 20px;
+    position: absolute;
+}
+
+.vinterOverskrift h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.vinterOverskrift h2 {
+    font-size: 3rem;
+}
+
+.vinterOverskrift {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    align-items: center;
+}
+
+.tekstboks img {
+    height: 200px;
+    width: 568px;
+    margin: 0;
+    margin-left: 50px;
+}
+
+.tekstboks {
+    position: relative;
+}
+
+.tekstboksP {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7rem;
+    line-height: 1.5;
+    width: 430px;
+    margin-left: 40px;
+}
+
+.vinterBoks {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.blaabokse img {
+    max-height: 223px;
+    width: auto;
+}
+
+.blaabokse {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 4%;
+}
+
+#pige {
+    height: 670px;
+    width: auto;
+    margin-bottom: 35px;
+    margin-left: 90px;
+    position: relative;
+}
+
+.blaaboksbaggrund {
+    background-image: url(/img/blaaboks.png);
+    background-size: cover;
+    width: 291px;
+    height: 223px;
+}
+
+#varmepude {
+    height: 180px;
+    width: auto;
+    padding-right: 15px;
+}
+
+#chokolade {
+    height: 180px;
+    width: auto;
+    margin-right: 18px;
+    margin-top: 15px;
+}
+
+#pude {
+    height: 170px;
+    width: auto;
+    margin-right: 18px;
+    margin-top: 25px;
+}
+
+#bind {
+    height: 160px;
+    width: auto;
+    margin-right: 15px;
+    margin-top: 30px;
+}
+
+.genstande p {
+    font-size: 2rem;
+}
+
+.genstande {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 4%;
+}
+
+.cirkel {
+    width: 670px;
+    margin-left: 90px;
+    margin-bottom: 100px;
+}
+
+
+/*------------------VINTER VIDEO CSS------------------------ */
+
+/*classes der skal have transition
+
+- .vintervideo
+- .videoramme
+- .skygge
+- (.doneVideo eller visDoneVideo)
+- .  */
+
+.vintervideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 500px;
+    transition: all 2s ease;
+}
+
+.videoramme {
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    top: 350px;
+    left: 135px;
+    z-index: 2;
+    transition: all 2s ease;
+}
+
+.videoramme img
+
+/*Billede af livmoder*/
+    {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.skygge{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 2s ease;
+    z-index: 1;
+}
+.moerk {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.videoAaben {
+    width: 80%;
+    height: 90%;
+    top: 50px;
+    left: 150px;
+    z-index: 2;
+    /* transition: all 1.5s ease-in-out; */
+}
+
+#playknap {
+    position: absolute;
+    z-index: 4;
+    width: 200px;
+    height: 200px;
+    top: 170px;
+    left: 175px;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+#pil{
+    position:relative;
+}
+
+.tilbageknap {
+    background-color: transparent;
+    border: none;
+    font-family: 'Random Wednesday', sans-serif;
+    font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
+}
+
+.tilbageknap img {
+    width: 80px;
+    height: auto;
+}
+
+#tilbageknapVideo,
+#muteVinterVideo {
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    z-index: 3;
+    animation: fadeInd 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#tilbageknapVideo{
+    align-items: center;
+    justify-content: center;
+    left: 10px;
+    bottom: 10px;
+}
+
+
+#muteVinterVideo {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    left: 10px;
+    top: 10px;
+}
+
+/* #doneVideo {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 200px;
+} */
+
+.doneVideo {
+    display: none;
+    transition: all 1.5s ease-in-out;
+    /* flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    gap: 30px;
+    width: auto;
+    height: 400px;
+    position: absolute;
+    top: 250px;
+    left: 330px;
+    transition: all 1.5s ease-in-out; */
+}
+
+.visDoneVideo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: auto;
+    height: 400px;
+    position: absolute;
+    top: 250px;
+    left: 330px;
+    animation-name: fadeInd;
+    transition: all 1.5s ease-in-out;
+}
+
+.donevideo div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.doneVideo p {
+    font-size: 3rem;
+    margin: 0;
+    text-align: center;
+}
+
+
+.doneVideo img {
+    width: 350px;
+    height: auto;
+    position: relative;
+}
+
+
+
+/*-----------------------Flyttede genstande---------------------*/
+
+.flyttedeGenstande img {
+    width: 100px;
+    height: auto;
+    display: none;
+}
+
+#varmepude-flyttet {
+    position: absolute;
+    top: 62%;
+    right: 33%;
+    z-index: 1;
+}
+
+#chokolade-flyttet {
+    position: absolute;
+    top: 50%;
+    right: 35%;
+    z-index: 1;
+}
+
+#pude-flyttet {
+    position: absolute;
+    top: 35%;
+    right: 35%;
+    width: 200px;
+}
+
+#bind-flyttet {
+    position: absolute;
+    top: 70%;
+    right: 33%;
+    z-index: 1;
+}
+
+/*-----------------------Animationer---------------------*/
+
+@keyframes fadeInd {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUd {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
